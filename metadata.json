@@ -1,0 +1,5 @@
+{
+  "name": "GitFlow Visual Cheat Sheet",
+  "description": "An interactive, responsive documentation cheat sheet for Git commands, featuring a real-time visualized node graph to explain branching, committing, and merging flows.",
+  "requestFramePermissions": []
+}
