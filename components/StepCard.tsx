@@ -75,7 +75,7 @@ const StepCard: React.FC<StepCardProps> = ({ step, isActive, onActivate }) => {
              {/* Mobile Toggle Button - Chevron */}
              <button 
                 onClick={toggleExpand}
-                className={`md:hidden p-1 text-gh-muted hover:text-gh-text transition-transform duration-300 ${isExpanded ? 'rotate-90' : 'rotate-0'}`}
+                className={`md:hidden p-1 text-gh-muted hover:text-gh-text transition-transform duration-300 ${isExpanded ? '-rotate-90' : 'rotate-90'}`}
                 aria-label={isExpanded ? "Collapse" : "Expand"}
              >
                 <ChevronRight size={18} />
