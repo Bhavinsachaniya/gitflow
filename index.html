@@ -1,0 +1,119 @@
+
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GitFlow Visual | Lumina</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Helvetica', 'Arial', 'sans-serif'],
+              mono: ['JetBrains Mono', 'ui-monospace', 'SFMono-Regular', 'SF Mono', 'Menlo', 'Consolas', 'Liberation Mono', 'monospace'],
+            },
+            colors: {
+              gh: {
+                bg: 'var(--color-bg)',
+                canvas: 'var(--color-canvas)',
+                card: 'var(--color-card)',
+                header: 'var(--color-header)',
+                border: 'var(--color-border)',
+                borderActive: 'var(--color-border-active)',
+                text: 'var(--color-text)',
+                muted: 'var(--color-muted)',
+                link: 'var(--color-link)',
+                btn: 'var(--color-btn)',
+                success: 'var(--color-success)',
+                attention: 'var(--color-attention)',
+                danger: 'var(--color-danger)',
+                'code-bg': 'var(--color-code-bg)',
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      :root {
+        /* Light Mode Theme (Clean & Crisp) */
+        --color-bg: #FFFFFF;          /* Primary Background - Clean White */
+        --color-canvas: #F5F5F5;      /* Secondary Surface - Light Gray Sidebars */
+        --color-card: #FFFFFF;        /* Cards - White to pop on Gray */
+        --color-header: #FFFFFF;      /* Header - White */
+        --color-border: #E0E0E0;      /* Borders - Light Gray */
+        --color-border-active: #4f46e5; /* Keep Indigo for eye-catching focus */
+        --color-text: #000000;        /* Primary Text - Solid Black */
+        --color-muted: #666666;       /* Secondary Text - Medium Gray */
+        --color-link: #2563eb;        /* Link - Blue */
+        --color-btn: #F5F5F5;         /* Button - Gray Surface */
+        --color-success: #16a34a;
+        --color-attention: #d97706;
+        --color-danger: #dc2626;
+        --color-code-bg: #1E1E1E;     /* Code - Dark for contrast */
+      }
+
+      .dark {
+        /* Dark Mode Theme (High Contrast & Depth) */
+        --color-bg: #121212;          /* Primary Background - Deep Charcoal */
+        --color-canvas: #1E1E1E;      /* Secondary Surface - Lighter Gray Sidebars */
+        --color-card: #1E1E1E;        /* Cards - Same as Sidebar (Outline Style) */
+        --color-header: #1E1E1E;      /* Header */
+        --color-border: #333333;      /* Borders - Subtle Gray */
+        --color-border-active: #818cf8; /* Indigo for focus */
+        --color-text: #FFFFFF;        /* Primary Text - Pure White */
+        --color-muted: #B0B0B0;       /* Secondary Text - Muted Gray */
+        --color-link: #60a5fa;
+        --color-btn: #2C2C2C;         /* Button - Slightly lighter */
+        --color-success: #34d399;
+        --color-attention: #fbbf24;
+        --color-danger: #fb7185;
+        --color-code-bg: #000000;     /* Code - Black */
+      }
+
+      body {
+        background-color: var(--color-bg);
+        color: var(--color-text);
+        transition: background-color 0.3s ease, color 0.3s ease;
+      }
+      
+      /* Custom Scrollbar */
+      .custom-scrollbar::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+      }
+      .custom-scrollbar::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      .custom-scrollbar::-webkit-scrollbar-thumb {
+        background-color: var(--color-border);
+        border-radius: 99px;
+      }
+      .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+        background-color: var(--color-border-active);
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "framer-motion": "https://esm.sh/framer-motion@^12.24.10",
+    "d3": "https://esm.sh/d3@^7.9.0",
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
+    "react-dom": "https://esm.sh/react-dom@^19.2.4"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
