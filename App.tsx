@@ -1,6 +1,6 @@
 
 import React, { useState, useRef, useEffect, useMemo, useCallback, useLayoutEffect } from 'react';
-import { GitBranch, Github, Linkedin, Globe } from 'lucide-react';
+import { GitBranch, Github, Linkedin, Globe, Coffee } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import GitGraph from './components/GitGraph';
 import StepCard from './components/StepCard';
@@ -183,9 +183,23 @@ const App: React.FC = () => {
           ))}
           
           {/* Legend Section at the bottom of the guide */}
-          <div className="pt-4 opacity-100 transition-opacity">
+          <div className="pt-4 opacity-100 transition-opacity space-y-4">
             <Legend />
-            <div className="text-center pt-4 text-gh-muted text-xs opacity-50 pb-6 font-mono tracking-widest uppercase">
+            
+            <div className="mx-4">
+              <a 
+                href="https://buymeacoffee.com/bhavinsachaniya" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="group flex items-center justify-center gap-2.5 w-full py-2.5 px-4 rounded-xl font-medium text-xs tracking-wide bg-[#FFDD00] hover:bg-[#ffe338] text-slate-900 shadow-sm hover:shadow-md transition-all duration-200 transform hover:-translate-y-0.5 active:translate-y-0 border border-yellow-500/20"
+                title="Buy me a coffee"
+              >
+                <Coffee size={16} className="transition-transform group-hover:rotate-12" />
+                <span className="font-semibold">Buy me a coffee</span>
+              </a>
+            </div>
+
+            <div className="text-center pt-2 text-gh-muted text-xs opacity-50 pb-6 font-mono tracking-widest uppercase">
               End of Workflow
             </div>
           </div>
@@ -216,6 +230,9 @@ const App: React.FC = () => {
             </a>
             <a href="https://bhavinsachaniya.in" target="_blank" rel="noopener noreferrer" className="text-gh-muted hover:text-emerald-400 transition-all transform hover:scale-110" title="Portfolio">
                 <Globe size={20} />
+            </a>
+            <a href="https://buymeacoffee.com/bhavinsachaniya" target="_blank" rel="noopener noreferrer" className="text-gh-muted hover:text-[#FFDD00] transition-all transform hover:scale-110" title="Buy me a coffee">
+                <Coffee size={20} />
             </a>
           </div>
         </div>
