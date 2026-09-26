@@ -279,6 +279,28 @@ const App: React.FC = () => {
            <GitGraph state={activeGraphState} isDark={isDark} bgColor={graphBgColor} />
         </div>
       </div>
+
+      {/* FLOATING BUY ME A COFFEE BUTTON (Expands on Hover) */}
+      <motion.a
+        href="https://buymeacoffee.com/bhavinsachaniya"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Buy me a coffee"
+        title="Buy me a coffee"
+        initial={{ opacity: 0, scale: 0.8, y: 20 }}
+        animate={{ opacity: 1, scale: 1, y: 0 }}
+        transition={{ delay: 0.4, duration: 0.4 }}
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
+        className="fixed bottom-5 right-5 z-50 group flex items-center bg-[#FFDD00] text-neutral-900 font-bold shadow-lg hover:shadow-yellow-500/30 rounded-full p-3 hover:pr-4.5 transition-all duration-300 border border-yellow-400/90 cursor-pointer select-none"
+      >
+        <span className="flex items-center justify-center shrink-0">
+          <Coffee className="w-5 h-5 text-neutral-900 transition-transform duration-300 group-hover:rotate-12 group-hover:scale-110" />
+        </span>
+        <span className="max-w-0 overflow-hidden whitespace-nowrap opacity-0 group-hover:max-w-[140px] group-hover:opacity-100 group-hover:ml-2.5 text-xs font-bold tracking-tight text-neutral-900 transition-all duration-300 ease-in-out font-sans">
+          Buy me a coffee
+        </span>
+      </motion.a>
     </div>
   );
 };
