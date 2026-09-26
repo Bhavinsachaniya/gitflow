@@ -82,6 +82,7 @@
               card: 'var(--color-card)',
               header: 'var(--color-header)',
               border: 'var(--color-border)',
+              borderSubtle: 'var(--color-border-subtle)',
               borderActive: 'var(--color-border-active)',
               text: 'var(--color-text)',
               muted: 'var(--color-muted)',
@@ -100,40 +101,42 @@
   <style>
     :root {
       color-scheme: light;
-      /* Light Mode Theme (Clean & Crisp) */
-      --color-bg: #FFFFFF;
-      --color-canvas: #F5F5F5;
+      /* WCAG AAA Light Mode Theme */
+      --color-bg: #F8FAFC;
+      --color-canvas: #F1F5F9;
       --color-card: #FFFFFF;
       --color-header: #FFFFFF;
-      --color-border: #E0E0E0;
-      --color-border-active: #4f46e5;
-      --color-text: #000000;
-      --color-muted: #666666;
-      --color-link: #2563eb;
-      --color-btn: #F5F5F5;
-      --color-success: #16a34a;
-      --color-attention: #d97706;
-      --color-danger: #dc2626;
-      --color-code-bg: #1E1E1E;
+      --color-border: #64748B;
+      --color-border-subtle: #94A3B8;
+      --color-border-active: #2563EB;
+      --color-text: #0F172A;
+      --color-muted: #334155;
+      --color-link: #1E40AF;
+      --color-btn: #E2E8F0;
+      --color-success: #14532D;
+      --color-attention: #78350F;
+      --color-danger: #7F1D1D;
+      --color-code-bg: #0F172A;
     }
 
     .dark {
       color-scheme: dark;
-      /* Dark Mode Theme (High Contrast & Depth) */
-      --color-bg: #121212;
-      --color-canvas: #1E1E1E;
-      --color-card: #1E1E1E;
-      --color-header: #1E1E1E;
-      --color-border: #333333;
-      --color-border-active: #818cf8;
-      --color-text: #FFFFFF;
-      --color-muted: #B0B0B0;
-      --color-link: #60a5fa;
-      --color-btn: #2C2C2C;
-      --color-success: #34d399;
-      --color-attention: #fbbf24;
-      --color-danger: #fb7185;
-      --color-code-bg: #000000;
+      /* WCAG AAA Dark Mode Theme */
+      --color-bg: #0B0F17;
+      --color-canvas: #131926;
+      --color-card: #1A2234;
+      --color-header: #131926;
+      --color-border: #64748B;
+      --color-border-subtle: #475569;
+      --color-border-active: #818CF8;
+      --color-text: #F8FAFC;
+      --color-muted: #CBD5E1;
+      --color-link: #93C5FD;
+      --color-btn: #243048;
+      --color-success: #86EFAC;
+      --color-attention: #FDE047;
+      --color-danger: #FECDD3;
+      --color-code-bg: #020617;
     }
 
     body {

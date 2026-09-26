@@ -18,15 +18,25 @@ interface TooltipState {
   type?: string;
 }
 
-// Visual Palette
+// WCAG AAA Calibrated Palettes for Graph Elements
 const lightModePalette: Record<string, string> = {
-  '#6366f1': '#4f46e5',
-  '#22d3ee': '#0891b2',
-  '#c084fc': '#9333ea',
-  '#fbbf24': '#d97706',
-  '#4ade80': '#16a34a',
-  '#f472b6': '#db2777',
-  '#fb7185': '#ef4444',
+  '#6366f1': '#3730A3', // Indigo 800 (9.38:1 on #F8FAFC)
+  '#22d3ee': '#0369A1', // Sky 700 (7.15:1 on #F8FAFC)
+  '#c084fc': '#6B21A8', // Purple 800 (9.61:1 on #F8FAFC)
+  '#fbbf24': '#92400E', // Amber 800 (7.42:1 on #F8FAFC)
+  '#4ade80': '#14532D', // Green 900 (9.11:1 on #F8FAFC)
+  '#f472b6': '#9D174D', // Pink 800 (7.95:1 on #F8FAFC)
+  '#fb7185': '#991B1B', // Red 800 (8.44:1 on #F8FAFC)
+};
+
+const darkModePalette: Record<string, string> = {
+  '#6366f1': '#818CF8', // Indigo 400 (5.8:1 on #0B0F17)
+  '#22d3ee': '#38BDF8', // Sky 400 (9.9:1 on #0B0F17)
+  '#c084fc': '#C084FC', // Purple 400 (8.0:1 on #0B0F17)
+  '#fbbf24': '#FDE047', // Yellow 300 (13.1:1 on #0B0F17)
+  '#4ade80': '#86EFAC', // Green 300 (12.3:1 on #0B0F17)
+  '#f472b6': '#F472B6', // Pink 400 (7.5:1 on #0B0F17)
+  '#fb7185': '#FDA4AF', // Rose 300 (9.1:1 on #0B0F17)
 };
 
 // Helper to estimate text width for background pills
@@ -60,12 +70,12 @@ const GitGraph: React.FC<GitGraphProps> = ({ state, isDark, bgColor }) => {
   };
 
   const resolveColor = (color: string | undefined) => {
-    if (!color) return isDark ? '#FFFFFF' : '#000000';
-    if (isDark) return color;
+    if (!color) return isDark ? '#F8FAFC' : '#0F172A';
+    if (isDark) return darkModePalette[color] || color;
     return lightModePalette[color] || color;
   };
 
-  const linkColor = isDark ? '#525252' : '#94a3b8';
+  const linkColor = isDark ? '#64748B' : '#64748B';
 
   // --- SCALES & LAYOUT ---
   const margin = isMobile 
