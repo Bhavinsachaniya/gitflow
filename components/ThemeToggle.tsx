@@ -85,7 +85,7 @@ export const ThemeToggleButton: React.FC<ThemeToggleProps> = ({
     <button
       onClick={toggleTheme}
       className={`
-        relative p-2 rounded-full transition-all duration-300
+        relative min-w-[44px] min-h-[44px] flex items-center justify-center p-2.5 rounded-full transition-all duration-300
         hover:bg-gh-border active:scale-90
         text-gh-text
         ${className}

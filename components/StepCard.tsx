@@ -75,12 +75,11 @@ const StepCard: React.FC<StepCardProps> = ({ step, isActive, onActivate }) => {
             {/* Mobile Toggle Button - Chevron */}
             <button
               onClick={toggleExpand}
-              className={`md:hidden p-1 text-gh-muted hover:text-gh-text transition-transform duration-300 ${isExpanded ? '-rotate-90' : 'rotate-90'}`}
+              className={`md:hidden min-w-[44px] min-h-[44px] flex items-center justify-center -mr-2 text-gh-muted hover:text-gh-text transition-transform duration-300 ${isExpanded ? '-rotate-90' : 'rotate-90'}`}
               aria-label={isExpanded ? "Collapse" : "Expand"}
             >
-              <ChevronRight size={18} />
+              <ChevronRight size={20} />
             </button>
-
           </div>
         </div>
 
@@ -94,20 +93,22 @@ const StepCard: React.FC<StepCardProps> = ({ step, isActive, onActivate }) => {
         </div>
 
         {/* Command - Always Visible */}
-        <div className="bg-gh-code-bg rounded border border-gh-border flex items-center justify-between group/code relative overflow-hidden z-10">
-          <div className="flex items-center gap-2 px-3 py-2 overflow-x-auto custom-scrollbar w-full">
-            <span className="text-gh-muted select-none text-xs shrink-0 font-bold">$</span>
-            <code className="font-mono text-xs text-[#f1f5f9] whitespace-nowrap">
+        <div className="min-h-[64px] bg-gh-code-bg rounded-lg border border-gh-border flex items-center justify-between group/code relative overflow-hidden z-10 shadow-sm">
+          <div className="flex items-center gap-2.5 px-3.5 py-3 overflow-x-auto custom-scrollbar w-full">
+            <span className="text-gh-muted select-none text-sm shrink-0 font-bold">$</span>
+            <code className="font-mono text-xs sm:text-sm text-[#f1f5f9] whitespace-nowrap font-medium">
               {step.command}
             </code>
           </div>
           <button
             onClick={handleCopy}
-            className={`p-2 border-l border-gh-border/20 bg-transparent hover:bg-white/10 transition-colors h-full shrink-0 ${copyStatus === 'success' ? 'text-green-400' : 'text-gh-muted hover:text-white'}`}
+            className={`min-w-[44px] min-h-[64px] flex items-center justify-center p-3 border-l border-gh-border/20 bg-transparent hover:bg-white/10 transition-colors h-full shrink-0 ${copyStatus === 'success' ? 'text-green-400' : 'text-gh-muted hover:text-white'}`}
+            title="Copy command"
+            aria-label="Copy command"
           >
-            {copyStatus === 'idle' && <Copy size={12} />}
-            {copyStatus === 'success' && <Check size={12} />}
-            {copyStatus === 'error' && <X size={12} />}
+            {copyStatus === 'idle' && <Copy size={16} />}
+            {copyStatus === 'success' && <Check size={16} />}
+            {copyStatus === 'error' && <X size={16} />}
           </button>
         </div>
 

@@ -191,11 +191,11 @@ const App: React.FC = () => {
                 href="https://buymeacoffee.com/bhavinsachaniya" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="group flex items-center justify-center gap-2.5 w-full py-2.5 px-4 rounded-xl font-medium text-xs tracking-wide bg-[#FFDD00] hover:bg-[#ffe338] text-slate-900 shadow-sm hover:shadow-md transition-all duration-200 transform hover:-translate-y-0.5 active:translate-y-0 border border-yellow-500/20"
+                className="group flex items-center justify-center gap-2.5 w-full min-h-[48px] py-3 px-4 rounded-xl font-medium text-xs tracking-wide bg-[#FFDD00] hover:bg-[#ffe338] text-slate-900 shadow-sm hover:shadow-md transition-all duration-200 transform hover:-translate-y-0.5 active:translate-y-0 border border-yellow-500/20"
                 title="Buy me a coffee"
               >
-                <Coffee size={16} className="transition-transform group-hover:rotate-12" />
-                <span className="font-semibold">Buy me a coffee</span>
+                <Coffee size={18} className="transition-transform group-hover:rotate-12" />
+                <span className="font-semibold text-sm">Buy me a coffee</span>
               </a>
             </div>
 
@@ -217,21 +217,21 @@ const App: React.FC = () => {
              </div>
           </div>
           
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2">
             <ThemeToggleButton isDark={isDark} setIsDark={setIsDark} />
             
             <div className="h-4 w-px bg-gh-border mx-1"></div>
             
-            <a href="https://github.com/bhavinsachaniya" target="_blank" rel="noopener noreferrer" className="text-gh-muted hover:text-gh-text transition-all transform hover:scale-110" title="GitHub">
+            <a href="https://github.com/bhavinsachaniya" target="_blank" rel="noopener noreferrer" className="min-w-[44px] min-h-[44px] flex items-center justify-center rounded-lg text-gh-muted hover:text-gh-text hover:bg-gh-btn transition-all transform hover:scale-105" title="GitHub" aria-label="GitHub">
                 <Github size={20} />
             </a>
-            <a href="https://linkedin.com/in/bhavindotdraft" target="_blank" rel="noopener noreferrer" className="text-gh-muted hover:text-[#0077b5] transition-all transform hover:scale-110" title="LinkedIn">
+            <a href="https://linkedin.com/in/bhavindotdraft" target="_blank" rel="noopener noreferrer" className="min-w-[44px] min-h-[44px] flex items-center justify-center rounded-lg text-gh-muted hover:text-[#0077b5] hover:bg-gh-btn transition-all transform hover:scale-105" title="LinkedIn" aria-label="LinkedIn">
                 <Linkedin size={20} />
             </a>
-            <a href="https://bhavinsachaniya.in" target="_blank" rel="noopener noreferrer" className="text-gh-muted hover:text-emerald-400 transition-all transform hover:scale-110" title="Portfolio">
+            <a href="https://bhavinsachaniya.in" target="_blank" rel="noopener noreferrer" className="min-w-[44px] min-h-[44px] flex items-center justify-center rounded-lg text-gh-muted hover:text-emerald-400 hover:bg-gh-btn transition-all transform hover:scale-105" title="Portfolio" aria-label="Portfolio">
                 <Globe size={20} />
             </a>
-            <a href="https://buymeacoffee.com/bhavinsachaniya" target="_blank" rel="noopener noreferrer" className="text-gh-muted hover:text-[#FFDD00] transition-all transform hover:scale-110" title="Buy me a coffee">
+            <a href="https://buymeacoffee.com/bhavinsachaniya" target="_blank" rel="noopener noreferrer" className="min-w-[44px] min-h-[44px] flex items-center justify-center rounded-lg text-gh-muted hover:text-[#FFDD00] hover:bg-gh-btn transition-all transform hover:scale-105" title="Buy me a coffee" aria-label="Buy me a coffee">
                 <Coffee size={20} />
             </a>
           </div>
@@ -251,9 +251,9 @@ const App: React.FC = () => {
               </div>
               
               <div className="flex items-center gap-3">
-                 <div className="inline-flex items-center gap-2 px-3 py-2 rounded-md bg-gh-header border border-gh-border shadow-inner flex-1 min-w-0">
-                   <span className="text-gh-success font-mono font-bold select-none text-sm">➜</span>
-                   <code className="font-mono text-sm text-gh-text whitespace-nowrap overflow-x-auto custom-scrollbar">{activeStep.command}</code>
+                 <div className="min-h-[64px] inline-flex items-center gap-3 px-4 py-3 rounded-lg bg-gh-header border border-gh-border shadow-inner flex-1 min-w-0">
+                   <span className="text-gh-success font-mono font-bold select-none text-base">➜</span>
+                   <code className="font-mono text-sm md:text-base text-gh-text whitespace-nowrap overflow-x-auto custom-scrollbar font-medium">{activeStep.command}</code>
                  </div>
                  <AnimatePresence mode="wait">
                   {activeGraphState.message && (
@@ -262,9 +262,9 @@ const App: React.FC = () => {
                       initial={{ opacity: 0, scale: 0.9 }}
                       animate={{ opacity: 1, scale: 1 }}
                       exit={{ opacity: 0, scale: 0.9 }}
-                      className="hidden md:inline-flex items-center gap-2 px-3 py-2 rounded-full bg-gh-btn border border-gh-border shadow-sm shrink-0"
+                      className="hidden md:inline-flex items-center gap-2 px-3.5 py-2.5 rounded-full bg-gh-btn border border-gh-border shadow-sm shrink-0 min-h-[44px]"
                     >
-                       <div className="w-2 h-2 rounded-full bg-gh-success animate-pulse"></div>
+                       <div className="w-2.5 h-2.5 rounded-full bg-gh-success animate-pulse"></div>
                        <span className="text-xs font-mono font-medium text-gh-muted">{activeGraphState.message}</span>
                     </motion.div>
                   )}
@@ -292,9 +292,9 @@ const App: React.FC = () => {
         transition={{ delay: 0.4, duration: 0.4 }}
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
-        className="fixed bottom-5 right-5 z-50 group flex items-center bg-[#FFDD00] text-neutral-900 font-bold shadow-lg hover:shadow-yellow-500/30 rounded-full p-3 hover:pr-4.5 transition-all duration-300 border border-yellow-400/90 cursor-pointer select-none"
+        className="fixed bottom-5 right-5 z-50 group flex items-center min-w-[48px] min-h-[48px] bg-[#FFDD00] text-neutral-900 font-bold shadow-lg hover:shadow-yellow-500/30 rounded-full p-3 hover:pr-4.5 transition-all duration-300 border border-yellow-400/90 cursor-pointer select-none"
       >
-        <span className="flex items-center justify-center shrink-0">
+        <span className="flex items-center justify-center shrink-0 w-6 h-6">
           <Coffee className="w-5 h-5 text-neutral-900 transition-transform duration-300 group-hover:rotate-12 group-hover:scale-110" />
         </span>
         <span className="max-w-0 overflow-hidden whitespace-nowrap opacity-0 group-hover:max-w-[140px] group-hover:opacity-100 group-hover:ml-2.5 text-xs font-bold tracking-tight text-neutral-900 transition-all duration-300 ease-in-out font-sans">
