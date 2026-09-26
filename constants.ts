@@ -1,15 +1,15 @@
 
 import { CheatSheetStep } from './types';
 
-// Visual Palette - Consistent with Dark/Light themes
+// GitHub Primer Visual Palette
 const C = {
-  MAIN: '#6366f1',    // Indigo (Main)
-  FEATURE: '#22d3ee', // Cyan (Feature)
-  REMOTE: '#c084fc',  // Purple (Remote)
-  STASH: '#fbbf24',   // Amber
-  FILE_MOD: '#fb7185', // Rose (Modified)
-  FILE_STAGED: '#4ade80', // Green (Staged)
-  TAG: '#f472b6',     // Pink (Tag)
+  MAIN: '#0969DA',    // GitHub Blue (Main)
+  FEATURE: '#1F883D', // GitHub Green (Feature)
+  REMOTE: '#8250DF',  // GitHub Purple (Remote)
+  STASH: '#9A6700',   // GitHub Attention / Amber
+  FILE_MOD: '#CF222E', // GitHub Danger / Modified
+  FILE_STAGED: '#1A7F37', // GitHub Success / Staged
+  TAG: '#BF3989',     // GitHub Tag / Pink
 };
 
 export const steps: CheatSheetStep[] = [

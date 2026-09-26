@@ -15,8 +15,8 @@ export const Legend: React.FC = () => {
           <div className="text-[10px] font-bold uppercase tracking-wider text-gh-muted">Node Types</div>
           
           <div className="flex items-center gap-2.5">
-             <div className="w-5 h-5 rounded-full bg-gh-bg border-2 border-indigo-500 flex items-center justify-center shrink-0 shadow-xs">
-                <div className="w-1.5 h-1.5 rounded-full bg-indigo-500"></div>
+             <div className="w-5 h-5 rounded-full bg-gh-bg border-2 border-[#0969DA] dark:border-[#58A6FF] flex items-center justify-center shrink-0 shadow-xs">
+                <div className="w-1.5 h-1.5 rounded-full bg-[#0969DA] dark:bg-[#58A6FF]"></div>
              </div>
              <div className="flex items-center gap-1.5">
                <GitCommit size={14} className="text-gh-text" />
@@ -25,8 +25,8 @@ export const Legend: React.FC = () => {
           </div>
 
           <div className="flex items-center gap-2.5">
-             <div className="w-5 h-5 rounded-sm bg-gh-bg border-2 border-emerald-500 border-dashed flex items-center justify-center shrink-0">
-                <span className="text-[10px] font-bold text-emerald-500">✓</span>
+             <div className="w-5 h-5 rounded-sm bg-gh-bg border-2 border-[#1A7F37] dark:border-[#3FB950] border-dashed flex items-center justify-center shrink-0">
+                <span className="text-[10px] font-bold text-[#1A7F37] dark:text-[#3FB950]">✓</span>
              </div>
              <div className="flex items-center gap-1.5">
                <FileCheck size={14} className="text-gh-text" />
@@ -35,8 +35,8 @@ export const Legend: React.FC = () => {
           </div>
 
           <div className="flex items-center gap-2.5">
-             <div className="w-5 h-5 rounded-sm bg-gh-bg border-2 border-amber-500 flex items-center justify-center shrink-0">
-                <span className="text-[10px] font-bold text-amber-500">✎</span>
+             <div className="w-5 h-5 rounded-sm bg-gh-bg border-2 border-[#9A6700] dark:border-[#D29922] flex items-center justify-center shrink-0">
+                <span className="text-[10px] font-bold text-[#9A6700] dark:text-[#D29922]">✎</span>
              </div>
              <div className="flex items-center gap-1.5">
                <FileCode size={14} className="text-gh-text" />
@@ -45,8 +45,8 @@ export const Legend: React.FC = () => {
           </div>
 
           <div className="flex items-center gap-2.5">
-             <div className="w-5 h-5 rounded-sm bg-gh-bg border-2 border-rose-500 flex items-center justify-center shrink-0">
-                <AlertTriangle size={12} className="text-rose-500" />
+             <div className="w-5 h-5 rounded-sm bg-gh-bg border-2 border-[#CF222E] dark:border-[#F85149] flex items-center justify-center shrink-0">
+                <AlertTriangle size={12} className="text-[#CF222E] dark:text-[#F85149]" />
              </div>
              <span className="text-xs font-semibold text-gh-text">Merge Conflict</span>
           </div>
@@ -57,7 +57,7 @@ export const Legend: React.FC = () => {
            <div className="text-[10px] font-bold uppercase tracking-wider text-gh-muted">Branches & Zones</div>
            
            <div className="flex items-center gap-2.5">
-              <div className="w-3.5 h-3.5 rounded-full bg-indigo-500 ring-2 ring-indigo-500/30 shrink-0"></div>
+              <div className="w-3.5 h-3.5 rounded-full bg-[#0969DA] dark:bg-[#58A6FF] ring-2 ring-[#0969DA]/20 shrink-0"></div>
               <div className="flex items-center gap-1.5">
                 <GitBranch size={13} className="text-gh-text" />
                 <span className="text-xs font-semibold text-gh-text">Main Branch</span>
@@ -65,7 +65,7 @@ export const Legend: React.FC = () => {
            </div>
 
            <div className="flex items-center gap-2.5">
-              <div className="w-3.5 h-3.5 rounded-full bg-sky-500 ring-2 ring-sky-500/30 shrink-0"></div>
+              <div className="w-3.5 h-3.5 rounded-full bg-[#1F883D] dark:bg-[#3FB950] ring-2 ring-[#1F883D]/20 shrink-0"></div>
               <div className="flex items-center gap-1.5">
                 <GitBranch size={13} className="text-gh-text" />
                 <span className="text-xs font-semibold text-gh-text">Feature Branch</span>
@@ -73,7 +73,7 @@ export const Legend: React.FC = () => {
            </div>
 
            <div className="flex items-center gap-2.5">
-              <div className="w-3.5 h-3.5 rounded-full bg-purple-500 ring-2 ring-purple-500/30 shrink-0"></div>
+              <div className="w-3.5 h-3.5 rounded-full bg-[#8250DF] dark:bg-[#BC8CFF] ring-2 ring-[#8250DF]/20 shrink-0"></div>
               <div className="flex items-center gap-1.5">
                 <Cloud size={13} className="text-gh-text" />
                 <span className="text-xs font-semibold text-gh-text">Remote / Origin</span>
@@ -81,7 +81,7 @@ export const Legend: React.FC = () => {
            </div>
 
            <div className="flex items-center gap-2.5">
-              <div className="w-3.5 h-3.5 rounded-sm bg-amber-500 ring-2 ring-amber-500/30 shrink-0"></div>
+              <div className="w-3.5 h-3.5 rounded-sm bg-[#9A6700] dark:bg-[#D29922] ring-2 ring-[#9A6700]/20 shrink-0"></div>
               <div className="flex items-center gap-1.5">
                 <Archive size={13} className="text-gh-text" />
                 <span className="text-xs font-semibold text-gh-text">Stash / Temp</span>

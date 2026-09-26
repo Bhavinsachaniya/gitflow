@@ -18,25 +18,41 @@ interface TooltipState {
   type?: string;
 }
 
-// WCAG AAA Calibrated Palettes for Graph Elements
+// GitHub Primer Calibrated Palettes for Graph Elements
 const lightModePalette: Record<string, string> = {
-  '#6366f1': '#3730A3', // Indigo 800 (9.38:1 on #F8FAFC)
-  '#22d3ee': '#0369A1', // Sky 700 (7.15:1 on #F8FAFC)
-  '#c084fc': '#6B21A8', // Purple 800 (9.61:1 on #F8FAFC)
-  '#fbbf24': '#92400E', // Amber 800 (7.42:1 on #F8FAFC)
-  '#4ade80': '#14532D', // Green 900 (9.11:1 on #F8FAFC)
-  '#f472b6': '#9D174D', // Pink 800 (7.95:1 on #F8FAFC)
-  '#fb7185': '#991B1B', // Red 800 (8.44:1 on #F8FAFC)
+  '#0969DA': '#0969DA', // GitHub Blue
+  '#1F883D': '#1A7F37', // GitHub Green
+  '#8250DF': '#8250DF', // GitHub Purple
+  '#9A6700': '#9A6700', // GitHub Amber / Warning
+  '#CF222E': '#CF222E', // GitHub Danger
+  '#1A7F37': '#1A7F37', // GitHub Success
+  '#BF3989': '#BF3989', // GitHub Pink / Tag
+  // Fallbacks
+  '#6366f1': '#0969DA',
+  '#22d3ee': '#1A7F37',
+  '#c084fc': '#8250DF',
+  '#fbbf24': '#9A6700',
+  '#4ade80': '#1A7F37',
+  '#f472b6': '#BF3989',
+  '#fb7185': '#CF222E',
 };
 
 const darkModePalette: Record<string, string> = {
-  '#6366f1': '#818CF8', // Indigo 400 (5.8:1 on #0B0F17)
-  '#22d3ee': '#38BDF8', // Sky 400 (9.9:1 on #0B0F17)
-  '#c084fc': '#C084FC', // Purple 400 (8.0:1 on #0B0F17)
-  '#fbbf24': '#FDE047', // Yellow 300 (13.1:1 on #0B0F17)
-  '#4ade80': '#86EFAC', // Green 300 (12.3:1 on #0B0F17)
-  '#f472b6': '#F472B6', // Pink 400 (7.5:1 on #0B0F17)
-  '#fb7185': '#FDA4AF', // Rose 300 (9.1:1 on #0B0F17)
+  '#0969DA': '#58A6FF', // GitHub Blue (Dark)
+  '#1F883D': '#3FB950', // GitHub Green (Dark)
+  '#8250DF': '#BC8CFF', // GitHub Purple (Dark)
+  '#9A6700': '#D29922', // GitHub Amber (Dark)
+  '#CF222E': '#F85149', // GitHub Danger (Dark)
+  '#1A7F37': '#3FB950', // GitHub Success (Dark)
+  '#BF3989': '#DB61A2', // GitHub Pink (Dark)
+  // Fallbacks
+  '#6366f1': '#58A6FF',
+  '#22d3ee': '#3FB950',
+  '#c084fc': '#BC8CFF',
+  '#fbbf24': '#D29922',
+  '#4ade80': '#3FB950',
+  '#f472b6': '#DB61A2',
+  '#fb7185': '#F85149',
 };
 
 // Helper to estimate text width for background pills
@@ -70,12 +86,12 @@ const GitGraph: React.FC<GitGraphProps> = ({ state, isDark, bgColor }) => {
   };
 
   const resolveColor = (color: string | undefined) => {
-    if (!color) return isDark ? '#F8FAFC' : '#0F172A';
+    if (!color) return isDark ? '#F0F6FC' : '#1F2328';
     if (isDark) return darkModePalette[color] || color;
     return lightModePalette[color] || color;
   };
 
-  const linkColor = isDark ? '#64748B' : '#64748B';
+  const linkColor = isDark ? '#30363D' : '#D1D9E0';
 
   // --- SCALES & LAYOUT ---
   const margin = isMobile 

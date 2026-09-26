@@ -77,21 +77,23 @@
           },
           colors: {
             gh: {
-              bg: 'var(--color-bg)',
-              canvas: 'var(--color-canvas)',
-              card: 'var(--color-card)',
-              header: 'var(--color-header)',
-              border: 'var(--color-border)',
-              borderSubtle: 'var(--color-border-subtle)',
-              borderActive: 'var(--color-border-active)',
-              text: 'var(--color-text)',
-              muted: 'var(--color-muted)',
-              link: 'var(--color-link)',
-              btn: 'var(--color-btn)',
-              success: 'var(--color-success)',
-              attention: 'var(--color-attention)',
-              danger: 'var(--color-danger)',
-              'code-bg': 'var(--color-code-bg)',
+              bg: 'var(--canvas-default)',
+              canvas: 'var(--canvas-subtle)',
+              card: 'var(--surface-card)',
+              header: 'var(--canvas-subtle)',
+              border: 'var(--border-default)',
+              borderSubtle: 'var(--border-muted)',
+              borderActive: 'var(--border-active)',
+              text: 'var(--fg-default)',
+              muted: 'var(--fg-muted)',
+              subtle: 'var(--fg-subtle)',
+              link: 'var(--accent-fg)',
+              btn: 'var(--canvas-inset)',
+              success: 'var(--success-fg)',
+              successEmphasis: 'var(--success-emphasis)',
+              attention: 'var(--attention-fg)',
+              danger: 'var(--danger-fg)',
+              'code-bg': 'var(--code-bg)',
             }
           }
         }
@@ -101,47 +103,63 @@
   <style>
     :root {
       color-scheme: light;
-      /* WCAG AAA Light Mode Theme */
-      --color-bg: #F8FAFC;
-      --color-canvas: #F1F5F9;
-      --color-card: #FFFFFF;
-      --color-header: #FFFFFF;
-      --color-border: #64748B;
-      --color-border-subtle: #94A3B8;
-      --color-border-active: #2563EB;
-      --color-text: #0F172A;
-      --color-muted: #334155;
-      --color-link: #1E40AF;
-      --color-btn: #E2E8F0;
-      --color-success: #14532D;
-      --color-attention: #78350F;
-      --color-danger: #7F1D1D;
-      --color-code-bg: #0F172A;
+      /* GitHub Primer Light Theme */
+      --canvas-default: #FFFFFF;
+      --canvas-subtle: #F6F8FA;
+      --canvas-inset: #EFF2F5;
+      --surface-card: #FFFFFF;
+
+      --fg-default: #1F2328;
+      --fg-muted: #424A53;
+      --fg-subtle: #59636E;
+      --fg-on-emphasis: #FFFFFF;
+
+      --border-default: #D1D9E0;
+      --border-muted: #D8DEE4;
+      --border-active: #0969DA;
+
+      --accent-fg: #0969DA;
+      --accent-emphasis: #0550AE;
+
+      --success-fg: #1A7F37;
+      --success-emphasis: #1F883D;
+
+      --danger-fg: #CF222E;
+      --attention-fg: #9A6700;
+      --code-bg: #161B22;
     }
 
     .dark {
       color-scheme: dark;
-      /* WCAG AAA Dark Mode Theme */
-      --color-bg: #0B0F17;
-      --color-canvas: #131926;
-      --color-card: #1A2234;
-      --color-header: #131926;
-      --color-border: #64748B;
-      --color-border-subtle: #475569;
-      --color-border-active: #818CF8;
-      --color-text: #F8FAFC;
-      --color-muted: #CBD5E1;
-      --color-link: #93C5FD;
-      --color-btn: #243048;
-      --color-success: #86EFAC;
-      --color-attention: #FDE047;
-      --color-danger: #FECDD3;
-      --color-code-bg: #020617;
+      /* GitHub Primer Dark Theme */
+      --canvas-default: #0D1117;
+      --canvas-subtle: #161B22;
+      --canvas-inset: #21262D;
+      --surface-card: #161B22;
+
+      --fg-default: #F0F6FC;
+      --fg-muted: #C9D1D9;
+      --fg-subtle: #8B949E;
+      --fg-on-emphasis: #FFFFFF;
+
+      --border-default: #30363D;
+      --border-muted: #21262D;
+      --border-active: #58A6FF;
+
+      --accent-fg: #58A6FF;
+      --accent-emphasis: #1F6FEB;
+
+      --success-fg: #3FB950;
+      --success-emphasis: #238636;
+
+      --danger-fg: #F85149;
+      --attention-fg: #D29922;
+      --code-bg: #0D1117;
     }
 
     body {
-      background-color: var(--color-bg);
-      color: var(--color-text);
+      background-color: var(--canvas-default);
+      color: var(--fg-default);
     }
 
     /* Custom Scrollbar */

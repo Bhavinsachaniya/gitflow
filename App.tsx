@@ -157,7 +157,7 @@ const App: React.FC = () => {
     return () => observer.disconnect();
   }, [activeStepId, activateStep]); 
 
-  const graphBgColor = isDark ? '#0B0F17' : '#F8FAFC';
+  const graphBgColor = isDark ? '#0D1117' : '#FFFFFF';
   const [contextCopied, setContextCopied] = useState(false);
 
   const handleCopyContext = async () => {
@@ -255,7 +255,7 @@ const App: React.FC = () => {
         
         {/* Context Bar */}
         <div className="p-4 border-b border-gh-border bg-gh-card backdrop-blur-sm shrink-0 z-20 transition-colors duration-200 relative shadow-sm">
-           <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-gh-borderActive via-purple-500 to-gh-borderActive opacity-70"></div>
+           <div className="absolute top-0 left-0 w-full h-1 bg-gh-borderActive opacity-80"></div>
            <div className="max-w-4xl mx-auto w-full">
               <div className="flex items-center gap-3 mb-2.5">
                  <span className="px-2.5 py-0.5 rounded-full text-[10px] font-extrabold bg-gh-btn border border-gh-border text-gh-borderActive uppercase tracking-wider">{activeStep.category}</span>
